@@ -5,9 +5,12 @@ let idx_value = NaN;
 let array_length = Number(prompt("Enter the length of the array: "));
 
 //input taker
-if (typeof (array_length) === typeof (1)) {
+if (!isNaN(array_length)) {
     for (let i = 0; i < array_length; i++) {
         idx_value = Number(prompt("Enter the index_", i, " of the array: "))
+        while (isNaN(Number(idx_value))) {
+            idx_value = prompt("You have entered the wrong type of value. \nPlease try again: ");
+        }
         n_array.push(idx_value);
         idx_value = NaN;
     }
