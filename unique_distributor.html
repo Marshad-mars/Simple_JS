@@ -30,11 +30,13 @@
         <center>
             <h2 style="margin-top: 0px;">{Value Input Section}</h2>
             <h4>Enter the first input: </h4>
-            <input type="text" id="first_input" class="input_bar"><button onclick="" id="first_button">Submit</button>
+            <input type="text" id="first_input" class="input_bar">
             <h4>Enter the second input: </h4>
-            <input type="text" id="second_input" class="input_bar"><button onclick="" id="second_button>">Submit</button>
+            <input type="text" id="second_input" class="input_bar">
             <h4>Enter the third input: </h4>
-            <input type="text" id="third_input" class="input_bar"><button onclick="" id="third_button>">Submit</button>
+            <input type="text" id="third_input" class="input_bar">
+
+            <br><br><button id="input_button" onclick="extractor()" class="buttons">Submit</button>
         </center>
     </div>
     <div class="second_string">
@@ -50,29 +52,35 @@
     </div>
     <div class="output">
         <center>
+            <h2 style="margin-top: 0px;">{Main output Section}</h2>
             <p>First value: </p><h3 id="output1"></h3>
-            <p>First value: </p><h3 id="output2"></h3>
-            <p>First value: </p><h3 id="output3"></h3>
-            <p>First value: </p><h3 id="output4"></h3>
-            <p>First value: </p><h3 id="output5"></h3>
-            <p>First value: </p><h3 id="output6"></h3>
+            <p>second value: </p><h3 id="output2"></h3>
+            <p>third value: </p><h3 id="output3"></h3>
+            <p>fourth value: </p><h3 id="output4"></h3>
+            <p>fifth value: </p><h3 id="output5"></h3>
+            <p>sixth value: </p><h3 id="output6"></h3>
         </center>
-        <h1>hello world and it hits hard</h1>
     </div>
     <script>
-        let input1 = document.getElementById("first_input").value;
-        let input2 = document.getElementById("second_input").value;
-        let input3 = document.getElementById("third_input").value;
-        let input4 = document.getElementById("first_lateral").value;
-        let input5 = document.getElementById("second_lateral").value;
-        let input6 = document.getElementById("third_lateral").value;
+        var for_input1 = NaN;
+        function extractor(){
+            for_input1 = document.getElementById("first_input").value;
+            let input2 = document.getElementById("second_input").value;
+            let input3 = document.getElementById("third_input").value;
+        }
+        console.log("You haveenterdand the test is successfully completed: ", for_input1);
+        // let input4 = document.getElementById("first_lateral").value;
+        // let input5 = document.getElementById("second_lateral").value;
+        // let input6 = document.getElementById("third_lateral").value;
 
-        document.getElementById("output1").innerText = input1;
-        document.getElementById("output2").innerText = input2;
-        document.getElementById("output3").innerText = input3;
-        document.getElementById("output4").innerText = input4;
-        document.getElementById("output5").innerText = input5;
-        document.getElementById("output6").innerText = input6;
+        // document.getElementById("output1").innerText = input1;
+        // document.getElementById("output2").innerText = input2;
+        // document.getElementById("output3").innerText = input3;
+        // document.getElementById("output4").innerText = inpu  t4;
+        // document.getElementById("output5").innerText = input5;
+        // document.getElementById("output6").innerText = input6;
+
+        console.log("This is my first working; functional website model that i have build, in the journy pf my web-dev.")
     </script>
 </body>
 </html>
