@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concatanator</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+        }
+        .input{
+            background-color: rgb(255, 182, 221);
+            margin-top: 0px;
+            border-radius: 30px;
+        }
+        .second_string{
+            background-color: aqua;
+            border-radius: 30px;
+        }
+        .output{
+            background-color: rgb(255, 182, 221);
+            border-radius: 30px;
+        }
+        .buttons1{
+            margin-bottom: 20px;
+            height: 40px;
+            width: 60px;
+            border-radius: 10px;
+            box-shadow: 5px 8px 10px 5px rgba(0,0,0,0.4);
+        }
+        .buttons2{
+            margin-bottom: 20px;
+            height: 60px;
+            width: 90px;
+            border-radius: 10px;
+            box-shadow: 5px 8px 10px 5px rgba(0,0,0,0.4);
+        }
+        .input_bar{
+            border-radius: 8px;
+            box-shadow: 5px 8px 10px 5px rgba(0,0,0,0.4);
+        }
+        .output_div{
+            height: fit-content;
+            width: fit-content;
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <center><h1 style="background-color: aqua; margin-top: 0px; margin-bottom: 0px;"><i>Hello world, welcome to the unique distributor!</i></h1></center>
+    <div class="input">
+        <center>
+            <h2 style="margin-top: 0px;">{Value Input Section}</h2>
+            <h4>Enter the first input: </h4>
+            <input type="text" id="first_input" class="input_bar">
+            <h4>Enter the second input: </h4>
+            <input type="text" id="second_input" class="input_bar">
+            <h4>Enter the third input: </h4>
+            <input type="text" id="third_input" class="input_bar">
+
+            <br><br><button id="input_button" onclick="input_func1()" class="buttons1"><b>Submit</b></button>
+        </center>
+    </div>
+    <div class="second_string">
+        <center>
+            <h2 style="margin-top: 0px;">{lateral Input Section}</h2>
+            <h4>Enter the first lateral: </h4>
+            <input type="text" id="first_lateral" class="input_bar">
+            <h4>Enter the second lateral: </h4>
+            <input type="text" id="second_lateral" class="input_bar">
+            <h4>Enter the third lateral: </h4>
+            <input type="text" id="third_lateral" class="input_bar">
+
+            <br><br><button id="input_button" onclick="{input_func2(), concatanator()}" class="buttons2"><b>Submit and Concatanate</b></button>
+        </center>
+    </div>
+    <div class="output">
+        <center>
+            <h2 style="margin-top: 0px;">{Main output Section}</h2>
+
+            <i>First concatanated value: </i> 
+            <div class="output_div">
+                <h3 id="output1"></h3>
+            </div>
+            <i>second concatanated value: </i> <h3 id="output2"></h3>
+            <div class="output_div">
+                <h3 id="output2"></h3>
+            </div>
+            <i>third concatanated value: </i> <h3 id="output3"></h3>
+            <div class="output_div">
+                <h3 id="output1"></h3>
+            </div>
+        </center>
+    </div>
+    <script>
+        var input1 = NaN;
+        var input2 = NaN;
+        var input3 = NaN;
+        function input_func1(){
+            input1 = document.getElementById("first_input").value;
+            input2 = document.getElementById("second_input").value;
+            input3 = document.getElementById("third_input").value;
+        }
+        var input_lateral1 = NaN;
+        var input_lateral2 = NaN;
+        var input_lateral3 = NaN;
+        function input_func2(){
+            input_lateral1 = document.getElementById("first_lateral").value;
+            input_lateral2 = document.getElementById("second_lateral").value;
+            input_lateral3 = document.getElementById("third_lateral").value;
+        }
+        function concatanator(){
+            document.getElementById("output1").innerHTML = input1 + " " + input_lateral1;
+            document.getElementById("output2").innerHTML = input2 + " " + input_lateral2;
+            document.getElementById("output3").innerHTML = input3 + " " + input_lateral3;
+        }
+    </script>
+</body>
+</html>
+<!-- this model here would take 3 input from the user and would show him. -->
+<!-- Then would take 3 other inputs from the user and would modify the previous inputs with the new once. -->
